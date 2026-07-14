@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "general",
+  "compatibility_date": "2026-07-14",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "Tartarus Webpage"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
