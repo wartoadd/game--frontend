@@ -46,30 +46,54 @@
             <a class="button" href="https://example.com/windrose" target="_blank" rel="noopener">Join Windrose</a>
           </div>
 
-          <div class="card">
-            <h3>Arena Web Game</h3>
-            <p>Browser-based arena combat. Quick matches, leaderboards, and seasonal events.</p>
+          <<div class="card">
+  <h3>Arena Web Game</h3>
+  <p>Browser-based arena combat. Quick matches, leaderboards, and seasonal events.</p>
 
-            <!-- ⭐ Embedded Arena Game -->
-            <iframe 
-              src="https://game-frontend-pi.vercel.app/games.html"
-              width="100%"
-              height="900px"
-              style="border:none; background: transparent;">
-            </iframe>
+  <!-- ⭐ Arena with Loading Animation -->
+  <div id="arena-wrapper" style="position:relative; width:100%;">
 
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer" role="contentinfo">
-      <div>Questions about servers</div>
-      <div>
-        <a class="email-link" href="mailto:wartoad@tartarus-online.com">wartoad@tartarus-online.com</a>
-        &nbsp;|&nbsp;
-        <a class="email-link" href="mailto:nulj@tartarus-online.com">nulj@tartarus-online.com</a>
+    <!-- Loading Animation -->
+    <div id="arena-loading" 
+         style="
+           display:flex;
+           align-items:center;
+           justify-content:center;
+           height:300px;
+           color:#0f0;
+           font-family:'Courier New', monospace;
+           font-size:22px;
+           letter-spacing:3px;
+           text-transform:uppercase;
+           text-shadow:0 0 10px #0f0;
+         ">
+      <div class="loader" 
+           style="
+             width:60px;
+             height:60px;
+             border:6px solid #0f0;
+             border-top:6px solid transparent;
+             border-radius:50%;
+             animation:spin 1s linear infinite;
+             margin-right:20px;
+           ">
       </div>
+      Loading Arena…
+    </div>
+
+    <!-- Arena iframe -->
+    <iframe 
+      id="arena-frame"
+      src="https://game-frontend-pi.vercel.app/games.html"
+      width="100%"
+      height="900px"
+      style="border:none; background: transparent; display:none;">
+    </iframe>
+
+  </div>
+
+</div>
+
     </footer>
   </div>
 </body>
