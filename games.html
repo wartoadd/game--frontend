@@ -91,6 +91,19 @@
     </iframe>
 
   </div>
+  <style>
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+</style>
+  <script>
+document.getElementById('arena-frame').addEventListener('load', function() {
+  document.getElementById('arena-loading').style.display = 'none';
+  document.getElementById('arena-frame').style.display = 'block';
+});
+</script>
+        
 
 </div>
 
